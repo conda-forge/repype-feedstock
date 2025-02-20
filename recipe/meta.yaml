@@ -1,5 +1,5 @@
 {% set name = "repype" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/repype-{{ version }}.tar.gz
-  sha256: aa7503478e84e31693ad7a16500c0a624a488a22cbd246ad3ac610063258dbc0
+  sha256: 44e1b3930bd79a01dba7de7513ac8a7f353c84bb0e4853ba3a2623b50208ac03
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
